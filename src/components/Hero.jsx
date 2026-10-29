@@ -41,6 +41,9 @@ export default function Hero() {
             <a href="https://next-gentech.co.uk" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Website">
               <i className="fas fa-globe"></i>
             </a>
+            <a href="https://wa.me/8801771472632" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+              <i className="fab fa-whatsapp"></i>
+            </a>
             <a href="https://twitter.com/bdShroud" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Twitter/X">
               <i className="fab fa-x-twitter"></i>
             </a>

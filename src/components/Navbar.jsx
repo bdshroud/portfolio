@@ -68,7 +68,7 @@ export default function Navbar({ theme, toggleTheme, projectPage = false, onLogo
             closeMenu();
           }}
         >
-          <span className="logo-bracket">&lt;</span>Mohammad
+          <span className="logo-bracket">&lt;</span>Mohammad{' '}
           <span className="logo-accent">Yasin</span>
           <span className="logo-bracket"> /&gt;</span>
         </a>

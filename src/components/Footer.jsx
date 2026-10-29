@@ -15,8 +15,8 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#home" className="nav-logo">
-              <span className="logo-bracket">&lt;</span>Mohammad &amp;
-              <span className="logo-accent"> Yasin</span>
+              <span className="logo-bracket">&lt;</span>Mohammad{' '}
+              <span className="logo-accent">Yasin</span>
               <span className="logo-bracket"> /&gt;</span>
             </a>
             <p>Building professional Full Stack &amp; AI solutions — one project at a time.</p>
@@ -26,6 +26,9 @@ export default function Footer() {
               </a>
               <a href="https://next-gentech.co.uk" target="_blank" rel="noopener noreferrer" aria-label="Website">
                 <i className="fas fa-globe"></i>
+              </a>
+              <a href="https://wa.me/8801771472632" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i className="fab fa-whatsapp"></i>
               </a>
               <a href="https://twitter.com/bdShroud" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <i className="fab fa-x-twitter"></i>
@@ -64,6 +67,15 @@ export default function Footer() {
             <h4>Say Hello</h4>
             <p>
               <i className="fas fa-envelope"></i> business.bdshroud@gmail.com
+            </p>
+            <p>
+              <i className="fas fa-phone-alt"></i> <a href="tel:+8801771472632" style={{ color: 'inherit' }}>+880 1771-472632</a>
+            </p>
+            <p>
+              <i className="fab fa-whatsapp"></i>{' '}
+              <a href="https://wa.me/8801771472632" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                +880 1771-472632 (WhatsApp)
+              </a>
             </p>
             <p>
               <i className="fas fa-globe"></i> next-gentech.co.uk

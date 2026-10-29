@@ -52,6 +52,20 @@ export default function Contact() {
       content: <a href="mailto:business.bdshroud@gmail.com">business.bdshroud@gmail.com</a>
     },
     {
+      icon: 'fas fa-phone-alt',
+      label: 'Phone',
+      content: <a href="tel:+8801771472632">+880 1771-472632</a>
+    },
+    {
+      icon: 'fab fa-whatsapp',
+      label: 'WhatsApp',
+      content: (
+        <a href="https://wa.me/8801771472632" target="_blank" rel="noopener noreferrer">
+          +880 1771-472632 (Chat Now)
+        </a>
+      )
+    },
+    {
       icon: 'fas fa-globe',
       label: 'Website',
       content: (
