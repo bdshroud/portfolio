@@ -15,8 +15,8 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <a href="#home" className="nav-logo">
-              <span className="logo-bracket">&lt;</span>Mohammad
-              <span className="logo-accent">Yasin</span>
+              <span className="logo-bracket">&lt;</span>Mohammad &amp;
+              <span className="logo-accent"> Yasin</span>
               <span className="logo-bracket"> /&gt;</span>
             </a>
             <p>Building professional Full Stack &amp; AI solutions — one project at a time.</p>
@@ -76,7 +76,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Mohammad &amp; Yasin. Designed &amp; Built with{' '}
+            © {new Date().getFullYear()} Mohammad Yasin. Designed &amp; Built with{' '}
             <i className="fas fa-heart"></i> from Bangladesh.
           </p>
           <a href="#home" className="back-to-top" aria-label="Back to top">
