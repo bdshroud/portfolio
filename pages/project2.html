@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow — Project Detail | Alex Morgan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+<body class="project-page">
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Alex<span class="logo-accent">Morgan</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="../index.html#home"     class="nav-link">Home</a></li>
+        <li><a href="../index.html#about"    class="nav-link">About</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="back-nav">
+      <a href="../index.html#projects" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+
+    <div class="project-detail-hero">
+      <div class="project-detail-meta">
+        <span class="detail-badge">Full Stack</span>
+        <span class="detail-badge live">🟢 Live</span>
+        <span class="detail-badge">2024</span>
+      </div>
+      <h1 class="project-detail-title">TaskFlow<br /><span class="accent">Collaborative Project Manager</span></h1>
+      <p class="project-detail-desc">
+        A real-time, collaborative project management tool inspired by Trello and Notion. 
+        Featuring Kanban boards, drag-and-drop task cards, team member roles, 
+        in-app chat, and detailed analytics.
+      </p>
+      <div class="project-detail-links">
+        <a href="https://taskflow-demo.vercel.app" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        <a href="https://github.com/alexmorgan/taskflow" target="_blank" class="btn btn-ghost">
+          <i class="fab fa-github"></i> GitHub (Client)
+        </a>
+      </div>
+    </div>
+
+    <div class="project-main-image">
+      <img src="../images/project2.jpg" alt="TaskFlow Screenshot"
+           onerror="this.src='https://placehold.co/1200x480/f56565/ffffff?text=TaskFlow+Project+Manager'" />
+    </div>
+
+    <div class="project-content-grid">
+      <div class="project-main-content">
+        <div class="project-section">
+          <h2><i class="fas fa-align-left"></i> Project Overview</h2>
+          <p>
+            TaskFlow is a full-featured project management platform built to help development teams 
+            and creative agencies manage projects efficiently. It combines the visual simplicity of 
+            Kanban boards with robust team collaboration features like real-time updates, 
+            file attachments, and integrated chat.
+          </p>
+          <p>
+            The motivation was my own frustration during a university group project — juggling GitHub 
+            Issues, WhatsApp messages, and Google Docs was chaotic. TaskFlow brings everything together.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-star"></i> Key Features</h2>
+          <ul>
+            <li>Drag-and-drop Kanban boards with customizable columns and color labels</li>
+            <li>Real-time collaboration via WebSockets — see teammates' updates instantly</li>
+            <li>Role-based access control (Owner, Admin, Member, Viewer)</li>
+            <li>In-app team chat with message threads and file attachments</li>
+            <li>Task deadlines, priorities, assignees, and progress tracking</li>
+            <li>Project analytics dashboard with burndown charts and velocity metrics</li>
+            <li>GitHub integration — link tasks to commits and PRs</li>
+            <li>Dark / Light mode and fully responsive across all devices</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h2>
+          <ul>
+            <li>
+              <strong>Real-time drag-and-drop sync</strong> — ensuring the board state stayed consistent 
+              across multiple clients when tasks moved simultaneously. Used optimistic UI updates with 
+              server-side reconciliation.
+            </li>
+            <li>
+              <strong>Role-based access at the query level</strong> — preventing unauthorized users from 
+              accessing project data even through direct API calls. Implemented row-level security via 
+              Prisma middleware.
+            </li>
+            <li>
+              <strong>N+1 query problem</strong> — fetching tasks with their assignees triggered hundreds 
+              of queries. Fixed using Prisma's <code>include</code> with selective fields.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-rocket"></i> Future Improvements</h2>
+          <ul>
+            <li>AI assistant to auto-prioritize tasks and suggest sprint plans</li>
+            <li>Gantt chart view for timeline-based project planning</li>
+            <li>Slack and Discord webhook integrations</li>
+            <li>Time tracking with billable hours reporting for freelancers</li>
+            <li>Offline mode with conflict-free sync using CRDTs</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="project-sidebar">
+        <div class="sidebar-card">
+          <h3><i class="fas fa-layer-group"></i> Tech Stack</h3>
+          <div class="tech-list">
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" /></div>
+              <div><div class="tech-name">Next.js 14</div><div class="tech-role">Frontend Framework</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" /></div>
+              <div><div class="tech-name">TypeScript</div><div class="tech-role">Type Safety</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /></div>
+              <div><div class="tech-name">PostgreSQL</div><div class="tech-role">Relational Database</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg" alt="Prisma" /></div>
+              <div><div class="tech-name">Prisma ORM</div><div class="tech-role">Database ORM</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-plug" style="color:#6c63ff"></i></div>
+              <div><div class="tech-name">Socket.IO</div><div class="tech-role">Real-time Events</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" /></div>
+              <div><div class="tech-name">Tailwind CSS</div><div class="tech-role">Styling</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3><i class="fas fa-info-circle"></i> Project Info</h3>
+          <div class="info-list">
+            <div class="info-row"><span class="info-label">Category</span><span class="info-value">Full Stack</span></div>
+            <div class="info-row"><span class="info-label">Duration</span><span class="info-value">4 months</span></div>
+            <div class="info-row"><span class="info-label">Year</span><span class="info-value">2024</span></div>
+            <div class="info-row"><span class="info-label">Status</span><span class="info-value live-badge">🟢 Live</span></div>
+            <div class="info-row"><span class="info-label">Team</span><span class="info-value">Solo Developer</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="other-projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Explore More</p>
+        <h2 class="section-title">Other <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="other-projects-grid">
+        <a href="project1.html" class="mini-project-card">
+          <img src="../images/project1.jpg" alt="ShopSphere" onerror="this.src='https://placehold.co/400x160/6c63ff/ffffff?text=ShopSphere'" />
+          <div class="mini-card-body"><h4>ShopSphere — E-Commerce</h4><p>React · Node.js · MongoDB</p></div>
+        </a>
+        <a href="project3.html" class="mini-project-card">
+          <img src="../images/project3.jpg" alt="WeatherPulse" onerror="this.src='https://placehold.co/400x160/48bb78/ffffff?text=WeatherPulse'" />
+          <div class="mini-card-body"><h4>WeatherPulse — Weather App</h4><p>React · API · CSS3</p></div>
+        </a>
+        <a href="project4.html" class="mini-project-card">
+          <img src="../images/project4.jpg" alt="AuthGuard" onerror="this.src='https://placehold.co/400x160/ed8936/ffffff?text=AuthGuard'" />
+          <div class="mini-card-body"><h4>AuthGuard — Auth Service</h4><p>Node.js · JWT · Redis</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2026</span> Alex Morgan. All rights reserved.</p>
+        <a href="../index.html#projects" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/project.js"></script>
+</body>
+</html>

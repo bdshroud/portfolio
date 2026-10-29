@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherPulse — Project Detail | Alex Morgan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+<body class="project-page">
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Alex<span class="logo-accent">Morgan</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="back-nav">
+      <a href="../index.html#projects" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+
+    <div class="project-detail-hero">
+      <div class="project-detail-meta">
+        <span class="detail-badge">Frontend</span>
+        <span class="detail-badge live">🟢 Live</span>
+        <span class="detail-badge">2023</span>
+      </div>
+      <h1 class="project-detail-title">WeatherPulse<br /><span class="accent">Real-Time Weather App</span></h1>
+      <p class="project-detail-desc">
+        A beautiful, responsive weather application that delivers real-time forecasts, 
+        geolocation-based weather, animated sky backgrounds, and a 7-day outlook — 
+        all in an elegant, fast-loading interface.
+      </p>
+      <div class="project-detail-links">
+        <a href="https://weatherpulse.vercel.app" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        <a href="https://github.com/alexmorgan/weatherpulse" target="_blank" class="btn btn-ghost">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-main-image">
+      <img src="../images/project3.jpg" alt="WeatherPulse Screenshot"
+           onerror="this.src='https://placehold.co/1200x480/48bb78/ffffff?text=WeatherPulse+App'" />
+    </div>
+
+    <div class="project-content-grid">
+      <div class="project-main-content">
+        <div class="project-section">
+          <h2><i class="fas fa-align-left"></i> Project Overview</h2>
+          <p>
+            WeatherPulse is a frontend-focused weather application that integrates with the OpenWeatherMap API 
+            to display real-time weather data. The UI dynamically changes its color scheme and background 
+            animation based on the current weather condition — sunny skies show a warm gradient, 
+            stormy weather triggers dark animated clouds.
+          </p>
+          <p>
+            I built this project to practice API integration, async JavaScript, geolocation, 
+            and responsive CSS animations — skills that are essential for modern frontend development.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-star"></i> Key Features</h2>
+          <ul>
+            <li>Auto-detects user location via Geolocation API for instant local weather</li>
+            <li>City search with debounced autocomplete suggestions</li>
+            <li>7-day extended forecast with high/low temperatures and conditions</li>
+            <li>Hourly precipitation chart using Chart.js</li>
+            <li>Dynamic backgrounds and animated icons that match weather conditions</li>
+            <li>Wind speed, humidity, UV index, and "feels like" temperature</li>
+            <li>Toggle between Celsius and Fahrenheit</li>
+            <li>Offline caching with localStorage — last fetched data shown without internet</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h2>
+          <ul>
+            <li>
+              <strong>Geolocation permissions UX</strong> — browsers don't always grant location on first load. 
+              Implemented a graceful fallback to a default city with a clear prompt to enable location.
+            </li>
+            <li>
+              <strong>API rate limiting</strong> — the free OpenWeatherMap tier limits requests. 
+              Added localStorage caching with a 10-minute TTL to minimize API calls.
+            </li>
+            <li>
+              <strong>Smooth background transitions</strong> — changing the background based on weather 
+              without a jarring flash required CSS transition timing and class swapping strategies.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-rocket"></i> Future Improvements</h2>
+          <ul>
+            <li>Add weather alerts and severe weather notifications</li>
+            <li>Integrate air quality index (AQI) data</li>
+            <li>Add pollen count and allergy forecasts</li>
+            <li>Build a PWA version with push notifications for daily forecasts</li>
+            <li>Add interactive weather maps using Leaflet.js</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="project-sidebar">
+        <div class="sidebar-card">
+          <h3><i class="fas fa-layer-group"></i> Tech Stack</h3>
+          <div class="tech-list">
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-react" style="color:#61dafb"></i></div>
+              <div><div class="tech-name">React.js</div><div class="tech-role">Frontend UI</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-js-square" style="color:#f7df1e"></i></div>
+              <div><div class="tech-name">JavaScript ES6+</div><div class="tech-role">Core Logic</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-cloud-sun" style="color:#48bb78"></i></div>
+              <div><div class="tech-name">OpenWeatherMap</div><div class="tech-role">Weather Data API</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-chart-bar" style="color:#f56565"></i></div>
+              <div><div class="tech-name">Chart.js</div><div class="tech-role">Data Visualization</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-css3-alt" style="color:#1572b6"></i></div>
+              <div><div class="tech-name">CSS3 Animations</div><div class="tech-role">Styling & Motion</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3><i class="fas fa-info-circle"></i> Project Info</h3>
+          <div class="info-list">
+            <div class="info-row"><span class="info-label">Category</span><span class="info-value">Frontend</span></div>
+            <div class="info-row"><span class="info-label">Duration</span><span class="info-value">3 weeks</span></div>
+            <div class="info-row"><span class="info-label">Year</span><span class="info-value">2023</span></div>
+            <div class="info-row"><span class="info-label">Status</span><span class="info-value live-badge">🟢 Live</span></div>
+            <div class="info-row"><span class="info-label">Role</span><span class="info-value">Solo Developer</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="other-projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Explore More</p>
+        <h2 class="section-title">Other <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="other-projects-grid">
+        <a href="project1.html" class="mini-project-card">
+          <img src="../images/project1.jpg" alt="ShopSphere" onerror="this.src='https://placehold.co/400x160/6c63ff/ffffff?text=ShopSphere'" />
+          <div class="mini-card-body"><h4>ShopSphere — E-Commerce</h4><p>React · Node.js · MongoDB</p></div>
+        </a>
+        <a href="project2.html" class="mini-project-card">
+          <img src="../images/project2.jpg" alt="TaskFlow" onerror="this.src='https://placehold.co/400x160/f56565/ffffff?text=TaskFlow'" />
+          <div class="mini-card-body"><h4>TaskFlow — Project Manager</h4><p>Next.js · PostgreSQL · Prisma</p></div>
+        </a>
+        <a href="project4.html" class="mini-project-card">
+          <img src="../images/project4.jpg" alt="AuthGuard" onerror="this.src='https://placehold.co/400x160/ed8936/ffffff?text=AuthGuard'" />
+          <div class="mini-card-body"><h4>AuthGuard — Auth Service</h4><p>Node.js · JWT · Redis</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2026</span> Alex Morgan. All rights reserved.</p>
+        <a href="../index.html#projects" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/project.js"></script>
+</body>
+</html>

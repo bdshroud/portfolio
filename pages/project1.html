@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopSphere — Project Detail | Mohammad  Yasin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+<body class="project-page">
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Mohammad<span class="logo-accent">Yasin</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="../index.html#home"       class="nav-link">Home</a></li>
+        <li><a href="../index.html#about"      class="nav-link">About</a></li>
+        <li><a href="../index.html#skills"     class="nav-link">Skills</a></li>
+        <li><a href="../index.html#projects"   class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Back Button -->
+    <div class="back-nav">
+      <a href="../index.html#projects" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+
+    <!-- Project Hero -->
+    <div class="project-detail-hero">
+      <div class="project-detail-meta">
+        <span class="detail-badge">Full Stack</span>
+        <span class="detail-badge live">🟢 Live</span>
+        <span class="detail-badge">2023</span>
+      </div>
+      <h1 class="project-detail-title">ShopSphere<br /><span class="accent">E-Commerce Platform</span></h1>
+      <p class="project-detail-desc">
+        A full-featured e-commerce platform built from scratch with real-time inventory management, 
+        a streamlined checkout experience with Stripe integration, and a powerful admin dashboard.
+      </p>
+      <div class="project-detail-links">
+        <a href="https://shopsphere-demo.vercel.app" target="_blank" class="btn btn-primary">
+          <i class="fas fa-external-link-alt"></i> Live Demo
+        </a>
+        <a href="https://github.com/alexmorgan/shopsphere" target="_blank" class="btn btn-ghost">
+          <i class="fab fa-github"></i> GitHub (Client)
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Image -->
+    <div class="project-main-image">
+      <img src="../images/project1.jpg" alt="ShopSphere Screenshot"
+           onerror="this.src='https://placehold.co/1200x480/6c63ff/ffffff?text=ShopSphere+E-Commerce+Platform'" />
+    </div>
+
+    <!-- Content Grid -->
+    <div class="project-content-grid">
+      <!-- Main Content -->
+      <div class="project-main-content">
+        <div class="project-section">
+          <h2><i class="fas fa-align-left"></i> Project Overview</h2>
+          <p>
+            ShopSphere is a complete end-to-end e-commerce solution designed to help small and medium 
+            businesses launch their online stores quickly. The platform handles everything from product 
+            listing and inventory tracking to secure payment processing and order management.
+          </p>
+          <p>
+            The project was born from a real client need — a local boutique that was struggling with 
+            managing their manual inventory spreadsheet. I built ShopSphere to solve that specific pain 
+            point and generalized it into a reusable platform.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-star"></i> Key Features</h2>
+          <ul>
+            <li>Full product catalog with categories, filters, and advanced search</li>
+            <li>Real-time inventory management with low-stock alerts</li>
+            <li>Stripe-powered secure checkout with support for cards and wallets</li>
+            <li>Admin dashboard with sales analytics, order management, and reports</li>
+            <li>User authentication with JWT refresh tokens and secure cookie storage</li>
+            <li>Product image upload with automatic CDN optimization via Cloudinary</li>
+            <li>Email notifications for order confirmation, shipping updates, and receipts</li>
+            <li>Responsive design that works flawlessly across all device sizes</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h2>
+          <ul>
+            <li>
+              <strong>Race condition in inventory</strong> — multiple users purchasing the same last item simultaneously. 
+              Solved with MongoDB transactions and optimistic locking patterns.
+            </li>
+            <li>
+              <strong>Stripe webhook reliability</strong> — handling duplicate webhook events and ensuring idempotent 
+              payment processing to prevent double charges or double fulfillment.
+            </li>
+            <li>
+              <strong>Image optimization at scale</strong> — original images were slowing down page load. Integrated 
+              Cloudinary with auto-compression and responsive image serving.
+            </li>
+            <li>
+              <strong>Cart persistence across sessions</strong> — syncing guest cart with user cart upon login, 
+              merging items without duplicating quantities.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-rocket"></i> Future Improvements</h2>
+          <ul>
+            <li>Add AI-powered product recommendations based on browsing history</li>
+            <li>Implement multi-currency support and international shipping calculations</li>
+            <li>Build a native mobile app using React Native</li>
+            <li>Introduce subscription/recurring billing for product bundles</li>
+            <li>Add a review and rating system with verified purchase validation</li>
+            <li>Integrate Google Analytics 4 and advanced conversion tracking</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="project-sidebar">
+        <div class="sidebar-card">
+          <h3><i class="fas fa-layer-group"></i> Tech Stack</h3>
+          <div class="tech-list">
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-react" style="color:#61dafb"></i></div>
+              <div><div class="tech-name">React.js</div><div class="tech-role">Frontend UI</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-node-js" style="color:#339933"></i></div>
+              <div><div class="tech-name">Node.js</div><div class="tech-role">Backend Runtime</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" /></div>
+              <div><div class="tech-name">Express.js</div><div class="tech-role">REST API Framework</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+              <div><div class="tech-name">MongoDB</div><div class="tech-role">Database</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-stripe" style="color:#6772e5"></i></div>
+              <div><div class="tech-name">Stripe API</div><div class="tech-role">Payment Processing</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" /></div>
+              <div><div class="tech-name">Redux Toolkit</div><div class="tech-role">State Management</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3><i class="fas fa-info-circle"></i> Project Info</h3>
+          <div class="info-list">
+            <div class="info-row">
+              <span class="info-label">Category</span>
+              <span class="info-value">Full Stack</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Duration</span>
+              <span class="info-value">3 months</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Year</span>
+              <span class="info-value">2023</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Status</span>
+              <span class="info-value live-badge">🟢 Live</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Role</span>
+              <span class="info-value">Solo Developer</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Other Projects -->
+  <section class="other-projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Explore More</p>
+        <h2 class="section-title">Other <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="other-projects-grid">
+        <a href="project2.html" class="mini-project-card">
+          <img src="../images/project2.jpg" alt="TaskFlow"
+               onerror="this.src='https://placehold.co/400x160/f56565/ffffff?text=TaskFlow'" />
+          <div class="mini-card-body">
+            <h4>TaskFlow — Project Manager</h4>
+            <p>Next.js · PostgreSQL · Prisma</p>
+          </div>
+        </a>
+        <a href="project3.html" class="mini-project-card">
+          <img src="../images/project3.jpg" alt="WeatherPulse"
+               onerror="this.src='https://placehold.co/400x160/48bb78/ffffff?text=WeatherPulse'" />
+          <div class="mini-card-body">
+            <h4>WeatherPulse — Weather App</h4>
+            <p>React · OpenWeather API · CSS3</p>
+          </div>
+        </a>
+        <a href="project4.html" class="mini-project-card">
+          <img src="../images/project4.jpg" alt="AuthGuard"
+               onerror="this.src='https://placehold.co/400x160/ed8936/ffffff?text=AuthGuard'" />
+          <div class="mini-card-body">
+            <h4>AuthGuard — Auth Microservice</h4>
+            <p>Node.js · JWT · Redis</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2026</span> Alex Morgan. All rights reserved.</p>
+        <a href="../index.html#projects" class="back-to-top" aria-label="Back to projects">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/project.js"></script>
+</body>
+</html>

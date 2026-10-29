@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammad Yasin | Full Stack & AI Developer</title>
+  <meta name="description" content="Mohammad Yasin - Professional Full Stack & AI Software Developer based in Bangladesh. Custom AI software and web solutions." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Mohammad<span class="logo-accent">Yasin</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home"     class="nav-link active">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Mohammad Yasin</h1>
+        <div class="hero-typewriter">
+          <span class="typewriter-prefix">I'm a </span>
+          <span class="typewriter-text" id="typewriter"></span>
+          <span class="typewriter-cursor">|</span>
+        </div>
+        <p class="hero-description">
+          I build professional Full Stack &amp; AI-powered software solutions.
+          Passionate about custom AI software, clean architecture, and delivering real-world digital products.
+        </p>
+
+        <div class="hero-cta">
+          <a href="Resume.pdf" class="btn btn-primary" download="Mohammad_Yasin_Resume.pdf">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <i class="fas fa-eye"></i> View My Work
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/bdshroud" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://next-gentech.co.uk" target="_blank" rel="noopener" class="social-link" aria-label="Website">
+            <i class="fas fa-globe"></i>
+          </a>
+          <a href="https://twitter.com/bdShroud" target="_blank" rel="noopener" class="social-link" aria-label="Twitter/X">
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a href="mailto:business.bdshroud@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image-wrapper">
+        <div class="hero-image-ring ring-1"></div>
+        <div class="hero-image-ring ring-2"></div>
+        <div class="hero-image-ring ring-3"></div>
+        <div class="hero-photo">
+          <img src="images/me.jpg" alt="Mohammad Yasin - Full Stack & AI Developer" onerror="this.src='https://avatars.githubusercontent.com/u/67956315?v=4'" />
+        </div>
+        <div class="hero-badge badge-exp">
+          <span class="badge-num">5+</span>
+          <span class="badge-label">Years Exp.</span>
+        </div>
+        <div class="hero-badge badge-proj">
+          <span class="badge-num">61+</span>
+          <span class="badge-label">Projects</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Get to Know Me</p>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image-col">
+          <div class="about-image-frame">
+            <img src="images/me.jpg" alt="Mohammad Yasin working" onerror="this.src='https://avatars.githubusercontent.com/u/67956315?v=4'" />
+            <div class="about-image-decor"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-num">5+</span>
+              <span class="stat-text">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">61+</span>
+              <span class="stat-text">Projects Done</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">Open</span>
+              <span class="stat-text">For Hire</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content-col">
+          <h3 class="about-sub">Full Stack & AI Software Developer</h3>
+          <p class="about-text">
+            Hi there! I'm <strong>Mohammad Yasin</strong>, a professional Full Stack &amp; AI Software Developer based in Bangladesh. 
+            I provide custom AI software and modern web development services, and 
+            work with clients globally via <a href="https://next-gentech.co.uk" target="_blank">next-gentech.co.uk</a>.
+          </p>
+          <p class="about-text">
+            I specialize in building end-to-end web applications and AI-powered solutions that solve real-world problems.
+            From architecting robust backend APIs to crafting intuitive frontends — I care deeply about code quality, 
+            performance, and delivering value to clients.
+          </p>
+          <p class="about-text">
+            With over 61 public repositories on GitHub and experience across TypeScript, JavaScript, React, Node.js, 
+            and AI integration, I'm always pushing the boundaries of what's possible on the web.
+          </p>
+
+          <div class="about-tags">
+            <span class="tag"><i class="fas fa-robot"></i> AI/ML</span>
+            <span class="tag"><i class="fas fa-code"></i> Open Source</span>
+            <span class="tag"><i class="fas fa-globe"></i> Bangladesh</span>
+            <span class="tag"><i class="fas fa-server"></i> Backend</span>
+            <span class="tag"><i class="fas fa-paint-brush"></i> UI Design</span>
+            <span class="tag"><i class="fas fa-rocket"></i> Startups</span>
+          </div>
+
+          <div class="about-cta">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fas fa-envelope"></i> Let's Talk
+            </a>
+            <a href="Resume.pdf" class="btn btn-ghost" download>
+              <i class="fas fa-file-pdf"></i> My Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What I Work With</p>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Skill Category Tabs -->
+      <div class="skills-tabs">
+        <button class="skill-tab active" data-tab="frontend"><i class="fas fa-paint-brush"></i> Frontend</button>
+        <button class="skill-tab" data-tab="backend"><i class="fas fa-server"></i> Backend</button>
+        <button class="skill-tab" data-tab="tools"><i class="fas fa-tools"></i> Tools &amp; Others</button>
+      </div>
+
+      <div class="skills-panel active" id="tab-frontend">
+        <div class="skills-grid">
+          <div class="skill-card" data-level="92">
+            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+            <h4>HTML5</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 92%"></div></div>
+            <span class="skill-percent">92%</span>
+          </div>
+          <div class="skill-card" data-level="88">
+            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+            <h4>CSS3</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 88%"></div></div>
+            <span class="skill-percent">88%</span>
+          </div>
+          <div class="skill-card" data-level="85">
+            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+            <h4>JavaScript</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 85%"></div></div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-card" data-level="82">
+            <div class="skill-icon"><i class="fab fa-react"></i></div>
+            <h4>React.js</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 82%"></div></div>
+            <span class="skill-percent">82%</span>
+          </div>
+          <div class="skill-card" data-level="75">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" /></div>
+            <h4>Next.js</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 75%"></div></div>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-card" data-level="80">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" /></div>
+            <h4>Tailwind CSS</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 80%"></div></div>
+            <span class="skill-percent">80%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-backend">
+        <div class="skills-grid">
+          <div class="skill-card" data-level="80">
+            <div class="skill-icon"><i class="fab fa-node-js"></i></div>
+            <h4>Node.js</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 80%"></div></div>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-card" data-level="78">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" /></div>
+            <h4>Express.js</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 78%"></div></div>
+            <span class="skill-percent">78%</span>
+          </div>
+          <div class="skill-card" data-level="74">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+            <h4>MongoDB</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 74%"></div></div>
+            <span class="skill-percent">74%</span>
+          </div>
+          <div class="skill-card" data-level="70">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /></div>
+            <h4>PostgreSQL</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 70%"></div></div>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-card" data-level="68">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase" /></div>
+            <h4>Firebase</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 68%"></div></div>
+            <span class="skill-percent">68%</span>
+          </div>
+          <div class="skill-card" data-level="72">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
+            <h4>Python</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 72%"></div></div>
+            <span class="skill-percent">72%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-panel" id="tab-tools">
+        <div class="skills-grid">
+          <div class="skill-card" data-level="90">
+            <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+            <h4>Git &amp; GitHub</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 90%"></div></div>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-card" data-level="76">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /></div>
+            <h4>Docker</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 76%"></div></div>
+            <span class="skill-percent">76%</span>
+          </div>
+          <div class="skill-card" data-level="82">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /></div>
+            <h4>Figma</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 82%"></div></div>
+            <span class="skill-percent">82%</span>
+          </div>
+          <div class="skill-card" data-level="70">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" /></div>
+            <h4>AWS</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 70%"></div></div>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-card" data-level="85">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode" /></div>
+            <h4>VS Code</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 85%"></div></div>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-card" data-level="78">
+            <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="Jest" /></div>
+            <h4>Jest &amp; Testing</h4>
+            <div class="skill-bar"><div class="skill-fill" style="--level: 78%"></div></div>
+            <span class="skill-percent">78%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section class="section education" id="education">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">My Academic Path</p>
+        <h2 class="section-title">Edu<span class="accent">cation</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2019 – 2023</span>
+                <span class="timeline-badge">Bachelor's Degree</span>
+              </div>
+            </div>
+            <h3 class="timeline-title">B.Sc. in Computer Science &amp; Engineering</h3>
+            <p class="timeline-institution"><i class="fas fa-university"></i> University of New York, NY</p>
+            <p class="timeline-detail">
+              Graduated with <strong>CGPA 3.75/4.00</strong>. Specialized in Software Engineering and Human-Computer Interaction. 
+              Completed capstone project on real-time collaborative editing tools using WebSockets and CRDTs.
+            </p>
+            <div class="timeline-highlights">
+              <span><i class="fas fa-trophy"></i> Dean's List 2021–2022</span>
+              <span><i class="fas fa-code"></i> ACM Programming Club Vice-President</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-icon"><i class="fas fa-school"></i></div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2017 – 2019</span>
+                <span class="timeline-badge">HSC</span>
+              </div>
+            </div>
+            <h3 class="timeline-title">Higher Secondary Certificate (Science)</h3>
+            <p class="timeline-institution"><i class="fas fa-building"></i> Riverside High School, NY</p>
+            <p class="timeline-detail">
+              Passed with <strong>GPA 5.00/5.00</strong>. Major subjects: Physics, Chemistry, Mathematics, and Biology.
+              Participated in National Science Olympiad and won regional science fair.
+            </p>
+            <div class="timeline-highlights">
+              <span><i class="fas fa-star"></i> Gold Award — Science Fair 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">My Journey So Far</p>
+        <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot pulse"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-icon exp-icon"><i class="fas fa-briefcase"></i></div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Jan 2024 – Present</span>
+                <span class="timeline-badge badge-current">Current</span>
+              </div>
+            </div>
+            <h3 class="timeline-title">Junior Full Stack Developer</h3>
+            <p class="timeline-institution"><i class="fas fa-building"></i> TechNova Solutions, New York</p>
+            <p class="timeline-detail">
+              Building and maintaining React-based dashboards and REST APIs for an e-commerce platform 
+              serving 50,000+ monthly users. Implemented performance optimizations that improved page load times by 40%.
+            </p>
+            <div class="timeline-highlights">
+              <span><i class="fab fa-react"></i> React + Node.js</span>
+              <span><i class="fab fa-aws"></i> AWS Deployment</span>
+              <span><i class="fas fa-chart-line"></i> 40% Perf. Gain</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-icon exp-icon"><i class="fas fa-laptop-code"></i></div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> Jun 2023 – Dec 2023</span>
+                <span class="timeline-badge">Internship</span>
+              </div>
+            </div>
+            <h3 class="timeline-title">Frontend Developer Intern</h3>
+            <p class="timeline-institution"><i class="fas fa-building"></i> Pixel &amp; Co. Agency, Brooklyn, NY</p>
+            <p class="timeline-detail">
+              Collaborated with a team of designers and developers to build responsive marketing websites for clients. 
+              Developed reusable component libraries in React and wrote unit tests using Jest, achieving 85% code coverage.
+            </p>
+            <div class="timeline-highlights">
+              <span><i class="fab fa-react"></i> React</span>
+              <span><i class="fas fa-check-circle"></i> 85% Test Coverage</span>
+              <span><i class="fas fa-users"></i> Agile / Scrum</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div class="timeline-icon exp-icon"><i class="fas fa-globe"></i></div>
+              <div class="timeline-meta">
+                <span class="timeline-date"><i class="fas fa-calendar"></i> 2022 – 2023</span>
+                <span class="timeline-badge">Freelance</span>
+              </div>
+            </div>
+            <h3 class="timeline-title">Freelance Web Developer</h3>
+            <p class="timeline-institution"><i class="fas fa-globe"></i> Upwork / Fiverr (Remote)</p>
+            <p class="timeline-detail">
+              Delivered 10+ web projects for small businesses including portfolio sites, e-commerce stores, and landing pages. 
+              Maintained a 5-star rating with 100% client satisfaction.
+            </p>
+            <div class="timeline-highlights">
+              <span><i class="fas fa-star"></i> 5.0 Rating</span>
+              <span><i class="fas fa-check"></i> 10+ Projects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What I've Built</p>
+        <h2 class="section-title">My <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-image">
+            <img src="images/project1.png" alt="Wanderlust Travel App" onerror="this.src='https://placehold.co/600x400/6c63ff/ffffff?text=Wanderlust'" />
+            <div class="project-overlay">
+              <a href="pages/project1.html" class="overlay-btn">
+                <i class="fas fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>TypeScript</span><span>React</span><span>Node.js</span>
+            </div>
+            <h3 class="project-title">Wanderlust — Travel Platform</h3>
+            <p class="project-desc">A full-stack travel booking platform with real-time listings, user authentication, and Vercel deployment. Built with TypeScript and modern web technologies.</p>
+            <div class="project-actions">
+              <a href="pages/project1.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-info-circle"></i> Live Demo
+              </a>
+              <a href="https://github.com/bdshroud/b14-wanderlust-client" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-image">
+            <img src="images/project2.png" alt="DevStack Developer Tool" onerror="this.src='https://placehold.co/600x400/f56565/ffffff?text=DevStack'" />
+            <div class="project-overlay">
+              <a href="pages/project2.html" class="overlay-btn">
+                <i class="fas fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>TypeScript</span><span>React</span><span>Netlify</span>
+            </div>
+            <h3 class="project-title">DevStack — Developer Hub</h3>
+            <p class="project-desc">A developer tools hub and resource platform built with TypeScript. Deployed on Netlify with a clean, responsive interface for developers.</p>
+            <div class="project-actions">
+              <a href="pages/project2.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-info-circle"></i> Live Demo
+              </a>
+              <a href="https://github.com/bdshroud/devstack" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="frontend">
+          <div class="project-image">
+            <img src="images/project3.png" alt="News24 App" onerror="this.src='https://placehold.co/600x400/48bb78/ffffff?text=News24'" />
+            <div class="project-overlay">
+              <a href="pages/project3.html" class="overlay-btn">
+                <i class="fas fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>React</span><span>REST API</span><span>TypeScript</span>
+            </div>
+            <h3 class="project-title">News24 — News App</h3>
+            <p class="project-desc">A real-time news aggregation application built with React and REST APIs, featuring category filtering, search, and a clean reading experience.</p>
+            <div class="project-actions">
+              <a href="pages/project3.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-info-circle"></i> Live Demo
+              </a>
+              <a href="https://github.com/bdshroud/News24" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="backend">
+          <div class="project-image">
+            <img src="images/project1.png" alt="Wanderlust Server" onerror="this.src='https://placehold.co/600x400/ed8936/ffffff?text=Wanderlust+API'" />
+            <div class="project-overlay">
+              <a href="pages/project4.html" class="overlay-btn">
+                <i class="fas fa-eye"></i> View Details
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>Node.js</span><span>Express</span><span>Vercel</span>
+            </div>
+            <h3 class="project-title">Wanderlust — REST API Server</h3>
+            <p class="project-desc">The backend server powering the Wanderlust travel platform. Built with Node.js and Express, deployed on Vercel with REST API endpoints.</p>
+            <div class="project-actions">
+              <a href="pages/project4.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-info-circle"></i> View Details
+              </a>
+              <a href="https://github.com/bdshroud/b14-wanderlust-server" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="frontend">
+          <div class="project-image">
+            <img src="images/project5.png" alt="Bazardor BD Daily" onerror="this.src='https://placehold.co/600x400/dd6b20/ffffff?text=Bazardor+BD'" />
+            <div class="project-overlay">
+              <a href="https://bazardorbdaily.vercel.app" target="_blank" class="overlay-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>CSS</span><span>HTML</span><span>Vercel</span>
+            </div>
+            <h3 class="project-title">Bazardor BD Daily </h3>
+            <p class="project-desc">A Bangladeshi daily Bazardor portal with a clean, responsive layout. Designed and built with modern CSS and HTML for fast, accessible content delivery.</p>
+            <div class="project-actions">
+              <a href="https://bazardorbdaily.vercel.app" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/bdshroud/bazardorbdaily" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="frontend">
+          <div class="project-image">
+            <img src="images/project6.png" alt="Movie Explorer App" onerror="this.src='https://placehold.co/600x400/805ad5/ffffff?text=Movie+Explorer'" />
+            <div class="project-overlay">
+              <a href="https://live-movie-explorer.netlify.app/" target="_blank" class="overlay-btn">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>JavaScript</span><span>REST API</span><span>Netlify</span>
+            </div>
+            <h3 class="project-title">Movie Explorer — Film Discovery App</h3>
+            <p class="project-desc">A dynamic movie discovery app that lets users browse, search, and explore films using a live REST API. Clean UI with real-time search and responsive design.</p>
+            <div class="project-actions">
+              <a href="https://live-movie-explorer.netlify.app/" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/bdshroud/Movie-Explorer" target="_blank" class="btn btn-ghost btn-sm">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's Work Together!</h3>
+          <p>Have a project in mind, need a developer, or just want to say hi? I'm always open to discussing new opportunities and creative ideas.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Email</span>
+                <a href="mailto:business.bdshroud@gmail.com">business.bdshroud@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-globe"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Website</span>
+                <a href="https://next-gentech.co.uk" target="_blank">next-gentech.co.uk</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-x-twitter"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Twitter / X</span>
+                <a href="https://twitter.com/bdShroud" target="_blank">@Mohammad_Yasin</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Location</span>
+                <span>Bangladesh</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://github.com/bdshroud" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="https://next-gentech.co.uk" target="_blank" class="social-link"><i class="fas fa-globe"></i></a>
+            <a href="https://twitter.com/bdShroud" target="_blank" class="social-link"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:business.bdshroud@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@email.com" required />
+                <span class="form-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+              <span class="form-error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i>
+              <span class="btn-text">Send Message</span>
+            </button>
+            <div class="form-success" id="form-success">
+              <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Mohammad<span class="logo-accent">Yasin</span><span class="logo-bracket"> /&gt;</span>
+          </a>
+          <p>Building professional Full Stack &amp; AI solutions — one project at a time.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/bdshroud" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://next-gentech.co.uk" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
+            <a href="https://twitter.com/bdShroud" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="mailto:business.bdshroud@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Projects</h4>
+          <ul>
+            <li><a href="pages/project1.html">Wanderlust</a></li>
+            <li><a href="pages/project2.html">DevStack</a></li>
+            <li><a href="pages/project3.html">News24</a></li>
+            <li><a href="pages/project4.html">Wanderlust API</a></li>
+            <li><a href="https://bazardorbdaily.vercel.app" target="_blank">Bazardor BD</a></li>
+            <li><a href="https://live-movie-explorer.netlify.app/" target="_blank">Movie Explorer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Say Hello</h4>
+          <p><i class="fas fa-envelope"></i> business.bdshroud@gmail.com</p>
+          <p><i class="fas fa-globe"></i> next-gentech.co.uk</p>
+          <p><i class="fas fa-map-marker-alt"></i> Bangladesh</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2026</span> Mohammad Yasin. Designed &amp; Built with <i class="fas fa-heart"></i> from Bangladesh.</p>
+        <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

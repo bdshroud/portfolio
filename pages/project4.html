@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AuthGuard — Project Detail | Alex Morgan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+</head>
+<body class="project-page">
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Alex<span class="logo-accent">Morgan</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="../index.html#home" class="nav-link">Home</a></li>
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#projects" class="nav-link active">Projects</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="back-nav">
+      <a href="../index.html#projects" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Projects
+      </a>
+    </div>
+
+    <div class="project-detail-hero">
+      <div class="project-detail-meta">
+        <span class="detail-badge">Backend</span>
+        <span class="detail-badge" style="background:rgba(237,137,54,0.15);color:#ed8936;">🔒 Open Source</span>
+        <span class="detail-badge">2024</span>
+      </div>
+      <h1 class="project-detail-title">AuthGuard<br /><span class="accent">Authentication Microservice</span></h1>
+      <p class="project-detail-desc">
+        A production-ready authentication microservice with JWT-based access/refresh tokens, 
+        OAuth2 social login, Redis session management, and rate limiting — designed to be 
+        plug-and-play for any Node.js application.
+      </p>
+      <div class="project-detail-links">
+        <a href="https://authguard-docs.vercel.app" target="_blank" class="btn btn-primary">
+          <i class="fas fa-book"></i> View Documentation
+        </a>
+        <a href="https://github.com/alexmorgan/authguard" target="_blank" class="btn btn-ghost">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-main-image">
+      <img src="../images/project4.jpg" alt="AuthGuard Screenshot"
+           onerror="this.src='https://placehold.co/1200x480/ed8936/ffffff?text=AuthGuard+Microservice'" />
+    </div>
+
+    <div class="project-content-grid">
+      <div class="project-main-content">
+        <div class="project-section">
+          <h2><i class="fas fa-align-left"></i> Project Overview</h2>
+          <p>
+            AuthGuard is a standalone authentication microservice built with Node.js and Express, 
+            designed to handle all authentication and authorization concerns so your main application 
+            doesn't have to. It implements industry-best practices for token management, session security, 
+            and protection against common attack vectors.
+          </p>
+          <p>
+            The service can be deployed independently and communicates via a documented REST API, 
+            making it compatible with any frontend or backend that speaks HTTP.
+          </p>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-star"></i> Key Features</h2>
+          <ul>
+            <li>JWT access tokens (15min expiry) + refresh tokens (7-day, stored in Redis)</li>
+            <li>OAuth2 social login via Google, GitHub, and Discord</li>
+            <li>Refresh token rotation — every use issues a new refresh token, invalidating the old one</li>
+            <li>Rate limiting per IP and per user using Redis sliding window algorithm</li>
+            <li>Account lockout after N failed login attempts with email unlock flow</li>
+            <li>Two-factor authentication (TOTP) via Google Authenticator</li>
+            <li>Full audit log of auth events (login, logout, password reset, 2FA toggle)</li>
+            <li>Swagger/OpenAPI documentation auto-generated from route definitions</li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-exclamation-triangle"></i> Challenges Faced</h2>
+          <ul>
+            <li>
+              <strong>Refresh token theft detection</strong> — if a stolen refresh token is used after 
+              rotation, the service detects the reuse, invalidates the entire token family, 
+              and forces re-login. Implementing this family-tracking logic in Redis was complex.
+            </li>
+            <li>
+              <strong>Clock skew in distributed environments</strong> — JWT validation failures in 
+              multi-instance deployments due to server time differences. Added a configurable 
+              clock tolerance buffer.
+            </li>
+            <li>
+              <strong>TOTP window synchronization</strong> — allowing a ±1 window for TOTP codes 
+              to account for user clock drift without weakening security.
+            </li>
+          </ul>
+        </div>
+
+        <div class="project-section">
+          <h2><i class="fas fa-rocket"></i> Future Improvements</h2>
+          <ul>
+            <li>Passkey / WebAuthn support for passwordless authentication</li>
+            <li>Magic link login via email</li>
+            <li>Admin dashboard UI to manage users and sessions</li>
+            <li>Kubernetes Helm chart for easy cluster deployment</li>
+            <li>Add support for SMS-based OTP via Twilio as a 2FA alternative</li>
+            <li>Publish as an npm package for easy integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="project-sidebar">
+        <div class="sidebar-card">
+          <h3><i class="fas fa-layer-group"></i> Tech Stack</h3>
+          <div class="tech-list">
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fab fa-node-js" style="color:#339933"></i></div>
+              <div><div class="tech-name">Node.js</div><div class="tech-role">Runtime</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" /></div>
+              <div><div class="tech-name">Express.js</div><div class="tech-role">Web Framework</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><i class="fas fa-key" style="color:#ed8936"></i></div>
+              <div><div class="tech-name">JWT + Passport</div><div class="tech-role">Auth Tokens</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis" /></div>
+              <div><div class="tech-name">Redis</div><div class="tech-role">Session Store & Rate Limit</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" /></div>
+              <div><div class="tech-name">MongoDB</div><div class="tech-role">User Database</div></div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /></div>
+              <div><div class="tech-name">Docker</div><div class="tech-role">Containerization</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3><i class="fas fa-info-circle"></i> Project Info</h3>
+          <div class="info-list">
+            <div class="info-row"><span class="info-label">Category</span><span class="info-value">Backend</span></div>
+            <div class="info-row"><span class="info-label">Duration</span><span class="info-value">6 weeks</span></div>
+            <div class="info-row"><span class="info-label">Year</span><span class="info-value">2024</span></div>
+            <div class="info-row"><span class="info-label">Type</span><span class="info-value">Open Source</span></div>
+            <div class="info-row"><span class="info-label">Role</span><span class="info-value">Solo Developer</span></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <section class="other-projects">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Explore More</p>
+        <h2 class="section-title">Other <span class="accent">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="other-projects-grid">
+        <a href="project1.html" class="mini-project-card">
+          <img src="../images/project1.jpg" alt="ShopSphere" onerror="this.src='https://placehold.co/400x160/6c63ff/ffffff?text=ShopSphere'" />
+          <div class="mini-card-body"><h4>ShopSphere — E-Commerce</h4><p>React · Node.js · MongoDB</p></div>
+        </a>
+        <a href="project2.html" class="mini-project-card">
+          <img src="../images/project2.jpg" alt="TaskFlow" onerror="this.src='https://placehold.co/400x160/f56565/ffffff?text=TaskFlow'" />
+          <div class="mini-card-body"><h4>TaskFlow — Project Manager</h4><p>Next.js · PostgreSQL · Prisma</p></div>
+        </a>
+        <a href="project3.html" class="mini-project-card">
+          <img src="../images/project3.jpg" alt="WeatherPulse" onerror="this.src='https://placehold.co/400x160/48bb78/ffffff?text=WeatherPulse'" />
+          <div class="mini-card-body"><h4>WeatherPulse — Weather App</h4><p>React · OpenWeather API</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© <span id="footer-year">2026</span> Alex Morgan. All rights reserved.</p>
+        <a href="../index.html#projects" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/project.js"></script>
+</body>
+</html>
