@@ -76,7 +76,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Mohammad Yasin. Designed &amp; Built with{' '}
+            © {new Date().getFullYear()} Mohammad &amp; Yasin. Designed &amp; Built with{' '}
             <i className="fas fa-heart"></i> from Bangladesh.
           </p>
           <a href="#home" className="back-to-top" aria-label="Back to top">
